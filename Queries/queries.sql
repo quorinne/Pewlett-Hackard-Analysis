@@ -204,7 +204,7 @@ SELECT ce.emp_no,
 ce.first_name,
 ce.last_name,
 d.dept_name
--- INTO dept_info
+INTO dept_info
 FROM current_emp as ce
 INNER JOIN dept_emp AS de
 ON (ce.emp_no = de.emp_no)
@@ -221,5 +221,12 @@ inner join dept_emp as de
 on (ri.emp_no = de.emp_no);
 
 
+
+--SKILL DRILL BELOW
+SELECT emp_no, first_name, last_name, dept_name
+INTO Sales_Dev_retire
+FROM dept_info
+WHERE dept_name = 'Sales'
+  AND dept_name = 'Development';
 
 
