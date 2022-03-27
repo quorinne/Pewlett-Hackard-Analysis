@@ -29,5 +29,5 @@ The number of people born 01/01/1965 and 12/31/1965 is 1,549. With this new syst
 
 The 1,549 potential mentors are spread out among different departments which will give us a better idea of how many trainors PH will have per department.
 
-![alt text](https://github.com/quorinne/Pewlett-Hackard-Analysis/blob/main/Data/EmployeeDB.png?raw=true)
+![alt text](https://github.com/quorinne/Pewlett-Hackard-Analysis/blob/main/Data/retiringcountdept.png?raw=true)
 
