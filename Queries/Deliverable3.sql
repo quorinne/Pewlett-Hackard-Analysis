@@ -19,11 +19,34 @@ WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 		AND (de.to_date = '9999-01-01') 
 ORDER BY e.emp_no;
 
-select * from departments;
 
+
+select * from departments;
+select * from dept_emp;
+select * from employees;
 
 SELECT COUNT (emp_no), dept_name
 INTO retiring_dept_count
 FROM mentorship_dept
+GROUP BY dept_name
+ORDER BY COUNT DESC;
+
+
+
+SELECT DISTINCT ON (emp_no) d.dept_name,
+		e.emp_no,
+		d.dept_no
+INTO overall_dept_emp
+FROM employees as e
+	INNER JOIN dept_emp as de
+		on (e.emp_no = de.emp_no)
+	INNER JOIN departments as d
+		on (d.dept_no = de.dept_no)
+ORDER BY e.emp_no;
+
+
+SELECT COUNT (emp_no), dept_name
+INTO overall_dept_emp_count
+FROM overall_dept_emp
 GROUP BY dept_name
 ORDER BY COUNT DESC;
